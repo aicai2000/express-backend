@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/models/mongo/note-schema-model.ts"],
+  "sourcesContent": ["import { Schema, Model, Document, model } from \"mongoose\";\r\nimport { Note } from \"../note\";\r\n\r\nconst noteSchema = new Schema<Note>(\r\n    {\r\n        //createdBy: [{ type: Schema.Types.ObjectId, ref: \"User\" }],\r\n        text: { type: String, required: true, trim: true },\r\n        username: {type: String, required: true, trim: true},\r\n        createDate: { type: Date, required: true }\r\n\r\n    },\r\n    { collection: \"notes\" }\r\n);\r\n\r\nconst NoteSchemaModel = model<Note>(\"Note\", noteSchema);\r\nexport default NoteSchemaModel;"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,sBAA+C;AAG/C,MAAM,aAAa,IAAI;AAAA,EACnB;AAAA;AAAA,IAEI,MAAM,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,IACjD,UAAU,EAAC,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAI;AAAA,IACnD,YAAY,EAAE,MAAM,MAAM,UAAU,KAAK;AAAA,EAE7C;AAAA,EACA,EAAE,YAAY,QAAQ;AAC1B;AAEA,MAAM,sBAAkB,uBAAY,QAAQ,UAAU;AACtD,IAAO,4BAAQ;",
+  "names": []
+}

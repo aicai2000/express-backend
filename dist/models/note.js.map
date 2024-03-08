@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/models/note.ts"],
+  "sourcesContent": ["import { User } from \"./user\";\r\n\r\nexport interface Note {\r\n    id: string;\r\n    // createdBy: User\r\n    username: string\r\n    text: string;\r\n    createDate: Date;\r\n   }   "],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

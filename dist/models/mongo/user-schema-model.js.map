@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/models/mongo/user-schema-model.ts"],
+  "sourcesContent": ["import { Schema, Model, Document, model } from \"mongoose\";\r\nimport { User } from \"../user\";\r\n\r\nconst userSchema = new Schema<User>(\r\n    {\r\n        username: { type: String, required: true, trim: true },\r\n        password: { type: String, required: true, trim: true },\r\n        firstName: { type: String, required: true, trim: true },\r\n        lastName: { type: String, required: true, trim: true },\r\n        role: { type: String, required: true, trim: true },\r\n    },\r\n    { collection: \"users\" }\r\n);\r\n\r\nconst UserSchemaModel = model<User>(\"User\", userSchema);\r\nexport default UserSchemaModel;"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,sBAA+C;AAG/C,MAAM,aAAa,IAAI;AAAA,EACnB;AAAA,IACI,UAAU,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,IACrD,UAAU,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,IACrD,WAAW,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,IACtD,UAAU,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,IACrD,MAAM,EAAE,MAAM,QAAQ,UAAU,MAAM,MAAM,KAAK;AAAA,EACrD;AAAA,EACA,EAAE,YAAY,QAAQ;AAC1B;AAEA,MAAM,sBAAkB,uBAAY,QAAQ,UAAU;AACtD,IAAO,4BAAQ;",
+  "names": []
+}
